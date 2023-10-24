@@ -11,7 +11,8 @@
                     "id": "6ee47919-50df-420e-a413-6f26234ef95a",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Fire",
@@ -19,7 +20,8 @@
                     "id": "205b648a-657f-41a1-a47f-1867855d949a",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "MousePosition",
@@ -27,7 +29,8 @@
                     "id": "eecc6786-6057-41f7-9aa8-2ab84b3235f9",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Pause",
@@ -35,7 +38,8 @@
                     "id": "c480be52-650c-4b92-a215-ad1949e377f6",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -63,7 +67,7 @@
                 },
                 {
                     "name": "",
-                    "id": "2737d622-91e2-47c2-a49f-deed0c9d5b6a",
+                    "id": "62a13d65-a22f-42bb-9713-a143d64e376c",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
@@ -131,6 +135,61 @@
                     "name": "right",
                     "id": "e22312c3-e5f9-4dfc-aa4d-f81bcfec8d7e",
                     "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "IJKL",
+                    "id": "4b6ad66e-5ae4-4c63-8e92-87f3bf6b921d",
+                    "path": "2DVector(mode=2)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "cf7f4342-edf0-4470-97e8-85ae59d71f06",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "e88f8212-9b3a-4eec-a634-56cde75f96e7",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "20a32b7e-b1d5-4bd9-a63f-fd25409a5be0",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "167170ff-a0e3-48c0-bba1-eaa504a9fcc7",
+                    "path": "<Keyboard>/l",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
