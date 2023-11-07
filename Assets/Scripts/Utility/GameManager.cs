@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         " search at start up")]
     public bool printDebugOfWinnableStatus = true;
     [Tooltip("Page index in the UIManager to go to on winning the game")]
-    public int gameVictoryPageIndex = 0;
+    public int gameVictoryPageIndex = 3;
     [Tooltip("The effect to create upon winning the game")]
     public GameObject victoryEffect;
 
