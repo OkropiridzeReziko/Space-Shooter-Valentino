@@ -10,6 +10,7 @@ using UnityEngine;
 /// </summary>
 public class Health : MonoBehaviour
 {
+    public GameObject Player;
     [Header("Team Settings")]
     [Tooltip("The team associated with this damage")]
     public int teamId = 0;
@@ -33,6 +34,8 @@ public class Health : MonoBehaviour
     public int currentLives = 3;
     [Tooltip("The maximum number of lives this health can have")]
     public int maximumLives = 5;
+
+    public GameObject livesCounter;
 
     /// <summary>
     /// Description:
@@ -222,9 +225,20 @@ public class Health : MonoBehaviour
     void HandleDeathWithLives()
     {
         currentLives -= 1;
+        if (teamId == 0)
+        {
+            livesCounter.GetComponent<Lives>().LiveLost();
+        }
         if (currentLives > 0)
         {
-            Respawn();
+            if (teamId == 0)
+            {
+                Player.GetComponent<Rigidbody2D>().
+                StartCoroutine("Cooldown");
+            } else
+            {
+                Respawn();
+            }
         }
         else
         {
@@ -259,5 +273,10 @@ public class Health : MonoBehaviour
             gameObject.GetComponent<Enemy>().DoBeforeDestroy();
         }
         Destroy(this.gameObject);
+    }
+    IEnumerator Cooldown()
+    {
+        yield return new WaitForSecondsRealtime(3);
+        Respawn();
     }
 }
