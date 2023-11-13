@@ -113,6 +113,8 @@ public class Health : MonoBehaviour
     {
         transform.position = respawnPosition;
         currentHealth = defaultHealth;
+        Player.SetActive(true);
+        Player.GetComponent<Controller>().isLocked = false;
     }
 
     /// <summary>
@@ -233,8 +235,10 @@ public class Health : MonoBehaviour
         {
             if (teamId == 0)
             {
-                Player.GetComponent<Rigidbody2D>().
-                StartCoroutine("Cooldown");
+                Player.GetComponent<Rigidbody2D>();
+                Player.GetComponent<Controller>().isLocked = true;
+                Player.SetActive(false);
+                Invoke("Respawn", 3f);
             } else
             {
                 Respawn();
@@ -273,10 +277,5 @@ public class Health : MonoBehaviour
             gameObject.GetComponent<Enemy>().DoBeforeDestroy();
         }
         Destroy(this.gameObject);
-    }
-    IEnumerator Cooldown()
-    {
-        yield return new WaitForSecondsRealtime(3);
-        Respawn();
     }
 }

@@ -22,6 +22,7 @@ public class Controller : MonoBehaviour
 
     //The InputManager to read input from
     private InputManager inputManager;
+    public bool isLocked;
 
     /// <summary>
     /// Enum which stores different aiming modes
@@ -131,13 +132,16 @@ public class Controller : MonoBehaviour
     /// </summary>
     private void HandleInput()
     {
-        // Find the position that the player should look at
-        Vector2 lookPosition = GetLookPosition();
-        // Get movement input from the inputManager
-        Vector3 movementVector = new Vector3(inputManager.horizontalMoveAxis, inputManager.verticalMoveAxis, 0);
-        // Move the player
-        MovePlayer(movementVector);
-        LookAtPoint(lookPosition);
+        if (!isLocked)
+        {
+            // Find the position that the player should look at
+            Vector2 lookPosition = GetLookPosition();
+            // Get movement input from the inputManager
+            Vector3 movementVector = new Vector3(inputManager.horizontalMoveAxis, inputManager.verticalMoveAxis, 0);
+            // Move the player
+            MovePlayer(movementVector);
+            LookAtPoint(lookPosition);
+        }
     }
 
     /// <summary>
