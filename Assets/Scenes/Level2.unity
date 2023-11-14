@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!20 &33765233 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8504670375539375352, guid: df64f8b40ff810648be3b056f8da7e4b, type: 3}
+  m_PrefabInstance: {fileID: 1855226523}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &49616067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -172,12 +177,20 @@ PrefabInstance:
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 111767558614867185, guid: cfd62ad4c55daa942bae8f75211b08e0, type: 3}
+      propertyPath: followRange
+      value: Infinity
+      objectReference: {fileID: 0}
+    - target: {fileID: 111767558614867185, guid: cfd62ad4c55daa942bae8f75211b08e0, type: 3}
       propertyPath: followTarget
       value: 
       objectReference: {fileID: 2489128476066455050}
     - target: {fileID: 111767558614867189, guid: cfd62ad4c55daa942bae8f75211b08e0, type: 3}
       propertyPath: m_Name
       value: ChaserEnemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890150608144808246, guid: cfd62ad4c55daa942bae8f75211b08e0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -322,12 +335,20 @@ PrefabInstance:
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 111767558614867185, guid: cfd62ad4c55daa942bae8f75211b08e0, type: 3}
+      propertyPath: followRange
+      value: Infinity
+      objectReference: {fileID: 0}
+    - target: {fileID: 111767558614867185, guid: cfd62ad4c55daa942bae8f75211b08e0, type: 3}
       propertyPath: followTarget
       value: 
       objectReference: {fileID: 2489128476066455050}
     - target: {fileID: 111767558614867189, guid: cfd62ad4c55daa942bae8f75211b08e0, type: 3}
       propertyPath: m_Name
       value: ChaserEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890150608144808246, guid: cfd62ad4c55daa942bae8f75211b08e0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1556,6 +1577,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2111628337}
     m_Modifications:
+    - target: {fileID: 584683058982610388, guid: 576cba70e4daccf488dda522850ba325, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8282131552441171986, guid: 576cba70e4daccf488dda522850ba325, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.99
@@ -1595,6 +1620,10 @@ PrefabInstance:
     - target: {fileID: 8282131552441171986, guid: 576cba70e4daccf488dda522850ba325, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282131552441171987, guid: 576cba70e4daccf488dda522850ba325, type: 3}
+      propertyPath: followRange
+      value: Infinity
       objectReference: {fileID: 0}
     - target: {fileID: 8282131552441171987, guid: 576cba70e4daccf488dda522850ba325, type: 3}
       propertyPath: followTarget
@@ -1825,6 +1854,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2111628337}
     m_Modifications:
+    - target: {fileID: 584683058982610388, guid: 576cba70e4daccf488dda522850ba325, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8282131552441171986, guid: 576cba70e4daccf488dda522850ba325, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.45
@@ -1864,6 +1897,10 @@ PrefabInstance:
     - target: {fileID: 8282131552441171986, guid: 576cba70e4daccf488dda522850ba325, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282131552441171987, guid: 576cba70e4daccf488dda522850ba325, type: 3}
+      propertyPath: followRange
+      value: Infinity
       objectReference: {fileID: 0}
     - target: {fileID: 8282131552441171987, guid: 576cba70e4daccf488dda522850ba325, type: 3}
       propertyPath: followTarget
@@ -2136,6 +2173,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2111628337}
     m_Modifications:
+    - target: {fileID: 584683058982610388, guid: 576cba70e4daccf488dda522850ba325, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8282131552441171986, guid: 576cba70e4daccf488dda522850ba325, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.85
@@ -2175,6 +2216,10 @@ PrefabInstance:
     - target: {fileID: 8282131552441171986, guid: 576cba70e4daccf488dda522850ba325, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282131552441171987, guid: 576cba70e4daccf488dda522850ba325, type: 3}
+      propertyPath: followRange
+      value: Infinity
       objectReference: {fileID: 0}
     - target: {fileID: 8282131552441171987, guid: 576cba70e4daccf488dda522850ba325, type: 3}
       propertyPath: followTarget
@@ -3394,12 +3439,20 @@ PrefabInstance:
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 111767558614867185, guid: cfd62ad4c55daa942bae8f75211b08e0, type: 3}
+      propertyPath: followRange
+      value: Infinity
+      objectReference: {fileID: 0}
+    - target: {fileID: 111767558614867185, guid: cfd62ad4c55daa942bae8f75211b08e0, type: 3}
       propertyPath: followTarget
       value: 
       objectReference: {fileID: 2489128476066455050}
     - target: {fileID: 111767558614867189, guid: cfd62ad4c55daa942bae8f75211b08e0, type: 3}
       propertyPath: m_Name
       value: ChaserEnemy (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890150608144808246, guid: cfd62ad4c55daa942bae8f75211b08e0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3587,6 +3640,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2111628337}
     m_Modifications:
+    - target: {fileID: 584683058982610388, guid: 576cba70e4daccf488dda522850ba325, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8282131552441171986, guid: 576cba70e4daccf488dda522850ba325, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.91
@@ -3626,6 +3683,10 @@ PrefabInstance:
     - target: {fileID: 8282131552441171986, guid: 576cba70e4daccf488dda522850ba325, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282131552441171987, guid: 576cba70e4daccf488dda522850ba325, type: 3}
+      propertyPath: followRange
+      value: Infinity
       objectReference: {fileID: 0}
     - target: {fileID: 8282131552441171987, guid: 576cba70e4daccf488dda522850ba325, type: 3}
       propertyPath: followTarget
@@ -3816,6 +3877,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2111628337}
     m_Modifications:
+    - target: {fileID: 584683058982610388, guid: 69bb62ab0a22b454ab3c1a7e6c5a110a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8282131552441171986, guid: 69bb62ab0a22b454ab3c1a7e6c5a110a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.74
@@ -3855,6 +3920,10 @@ PrefabInstance:
     - target: {fileID: 8282131552441171986, guid: 69bb62ab0a22b454ab3c1a7e6c5a110a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282131552441171987, guid: 69bb62ab0a22b454ab3c1a7e6c5a110a, type: 3}
+      propertyPath: followRange
+      value: Infinity
       objectReference: {fileID: 0}
     - target: {fileID: 8282131552441171987, guid: 69bb62ab0a22b454ab3c1a7e6c5a110a, type: 3}
       propertyPath: followTarget
@@ -5236,6 +5305,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2111628337}
     m_Modifications:
+    - target: {fileID: 584683058982610388, guid: 69bb62ab0a22b454ab3c1a7e6c5a110a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8282131552441171986, guid: 69bb62ab0a22b454ab3c1a7e6c5a110a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.74
@@ -5275,6 +5348,10 @@ PrefabInstance:
     - target: {fileID: 8282131552441171986, guid: 69bb62ab0a22b454ab3c1a7e6c5a110a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282131552441171987, guid: 69bb62ab0a22b454ab3c1a7e6c5a110a, type: 3}
+      propertyPath: followRange
+      value: Infinity
       objectReference: {fileID: 0}
     - target: {fileID: 8282131552441171987, guid: 69bb62ab0a22b454ab3c1a7e6c5a110a, type: 3}
       propertyPath: followTarget
@@ -5979,6 +6056,10 @@ PrefabInstance:
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 111767558614867185, guid: cfd62ad4c55daa942bae8f75211b08e0, type: 3}
+      propertyPath: followRange
+      value: Infinity
+      objectReference: {fileID: 0}
+    - target: {fileID: 111767558614867185, guid: cfd62ad4c55daa942bae8f75211b08e0, type: 3}
       propertyPath: followTarget
       value: 
       objectReference: {fileID: 2489128476066455050}
@@ -5989,6 +6070,10 @@ PrefabInstance:
     - target: {fileID: 111767558614867189, guid: cfd62ad4c55daa942bae8f75211b08e0, type: 3}
       propertyPath: m_Name
       value: ChaserEnemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890150608144808246, guid: cfd62ad4c55daa942bae8f75211b08e0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6383,6 +6468,7 @@ MonoBehaviour:
   myRigidbody: {fileID: 0}
   moveSpeed: 10
   rotationSpeed: 60
+  isLocked: 0
   aimMode: 0
   movementMode: 2
 --- !u!222 &2330291903324469370
@@ -6582,6 +6668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c9a4613bbc6ce4b809b21678067793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 5516523419730237006}
   teamId: 0
   defaultHealth: 1
   maximumHealth: 1
@@ -6592,6 +6679,7 @@ MonoBehaviour:
   currentLives: 3
   maximumLives: 5
   livesCounter: {fileID: 2145418480}
+  MainCamera: {fileID: 33765233}
   deathEffect: {fileID: 6218169049356006189, guid: 68794701c80057447857bb433e54c579, type: 3}
   hitEffect: {fileID: 5156419567158778961, guid: d35295653acdbe24081a5caee3d9c353, type: 3}
 --- !u!95 &5350020361838449501

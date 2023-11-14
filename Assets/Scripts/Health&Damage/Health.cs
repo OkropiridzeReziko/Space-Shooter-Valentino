@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using static CameraController;
 
 /// <summary>
 /// This class handles the health state of a game object.
@@ -36,6 +37,7 @@ public class Health : MonoBehaviour
     public int maximumLives = 5;
 
     public GameObject livesCounter;
+    public Camera MainCamera;
 
     /// <summary>
     /// Description:
@@ -113,6 +115,7 @@ public class Health : MonoBehaviour
     {
         transform.position = respawnPosition;
         currentHealth = defaultHealth;
+        MainCamera.GetComponent<CameraController>().Unlock();
         Player.SetActive(true);
         Player.GetComponent<Controller>().isLocked = false;
     }
@@ -238,7 +241,9 @@ public class Health : MonoBehaviour
                 Player.GetComponent<Rigidbody2D>();
                 Player.GetComponent<Controller>().isLocked = true;
                 Player.SetActive(false);
-                Invoke("Respawn", 3f);
+                MainCamera.GetComponent<CameraController>().Lock();
+                transform.position = new Vector2(0, 999);
+                Invoke("Respawn", 5f);
             } else
             {
                 Respawn();
