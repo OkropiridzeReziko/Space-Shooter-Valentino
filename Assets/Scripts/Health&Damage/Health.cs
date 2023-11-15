@@ -39,6 +39,11 @@ public class Health : MonoBehaviour
     public GameObject livesCounter;
     public Camera MainCamera;
 
+    public int RespawnConstraintX;
+    public int RespawnConstraintY;
+    public bool Bottom = false;
+    public bool One = false;
+
     /// <summary>
     /// Description:
     /// Standard unity funciton called before the first frame update
@@ -49,7 +54,7 @@ public class Health : MonoBehaviour
     /// </summary>
     void Start()
     {
-        SetRespawnPoint(transform.position);
+        timeToBecomeDamagableAgain = Time.time + invincibilityTime;
     }
 
     /// <summary>
@@ -87,22 +92,6 @@ public class Health : MonoBehaviour
         }
     }
 
-    // The position that the health's gameobject will respawn at if lives are being used
-    private Vector3 respawnPosition;
-    /// <summary>
-    /// Description:
-    /// Changes the respawn position to a new position
-    /// Inputs:
-    /// Vector3 newRespawnPosition
-    /// Returns:
-    /// void (no return)
-    /// </summary>
-    /// <param name="newRespawnPosition">The new position to respawn at</param>
-    public void SetRespawnPoint(Vector3 newRespawnPosition)
-    {
-        respawnPosition = newRespawnPosition;
-    }
-
     /// <summary>
     /// Description:
     /// Repositions the health's game object to the respawn position and resets the health to the default value
@@ -113,7 +102,19 @@ public class Health : MonoBehaviour
     /// </summary>
     void Respawn()
     {
-        transform.position = respawnPosition;
+        timeToBecomeDamagableAgain = Time.time + invincibilityTime;
+
+        if (Bottom)
+        {
+            transform.position = new Vector3(Random.Range(-RespawnConstraintX, RespawnConstraintX), -22, 0);
+        } else if (One)
+        {
+            transform.position = new Vector3(Random.Range(-54, 43), Random.Range(-23, 15), 0);
+        } else
+        {
+            transform.position = new Vector3(Random.Range(-RespawnConstraintX, RespawnConstraintX), Random.Range(-RespawnConstraintY, RespawnConstraintY), 0);
+        }
+
         currentHealth = defaultHealth;
         MainCamera.GetComponent<CameraController>().Unlock();
         Player.SetActive(true);
