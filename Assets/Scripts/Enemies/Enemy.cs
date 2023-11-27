@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -260,6 +261,17 @@ public class Enemy : MonoBehaviour
         return movement;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Barrier"))
+        {
+            scrollDirection *= -1;
+        } else if (collision.gameObject.CompareTag("OOB"))
+        {
+            transform.position = new Vector2 (-58, 22);
+        }
+    }
+
     /// <summary>
     /// Description
     /// The desired rotation of follow movement mode
@@ -287,14 +299,14 @@ public class Enemy : MonoBehaviour
     /// <returns>Vector3: The movement to be used in scrolling movement mode.</returns>
     private Vector3 GetScrollingMovement()
     {
-        scrollDirection = GetScrollDirection();
+        //scrollDirection = GetScrollDirection();   
         Vector3 movement = scrollDirection * moveSpeed * Time.deltaTime;
         return movement;
     }
 
     /// <summary>
     /// Description
-    /// The desired rotation of scrolling movement mode
+    /// The desired rotation of Ding movement mode
     /// Inputs: 
     /// none
     /// Returns: 
