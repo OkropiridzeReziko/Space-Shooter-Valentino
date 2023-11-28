@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.IO.LowLevel.Unsafe;
+using Unity.VisualScripting;
 using UnityEngine;
 using static CameraController;
 
@@ -68,6 +70,11 @@ public class Health : MonoBehaviour
     void Update()
     {
         InvincibilityCheck();
+        if (GameManager.win && teamId == 1)
+        {
+            gameObject.GetComponent<Enemy>().scoreValue = 0;
+            Die();
+        }
     }
 
     // The specific game time when the health can be damged again

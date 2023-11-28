@@ -52,6 +52,8 @@ public class GameManager : MonoBehaviour
     // The number of enemies defeated in game
     private int enemiesDefeated = 0;
 
+    static public bool win;
+
     [Tooltip("Whether or not to print debug statements about whether the game can be won or not according to the game manager's" +
         " search at start up")]
     public bool printDebugOfWinnableStatus = true;
@@ -96,6 +98,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         HandleStartUp();
+        win = false;
     }
 
     /// <summary>
@@ -314,7 +317,8 @@ public class GameManager : MonoBehaviour
             {
                 Instantiate(victoryEffect, transform.position, transform.rotation, null);
             }
-        }     
+            win = true;
+        }   
     }
 
     [Header("Game Over Settings:")]

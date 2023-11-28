@@ -73,6 +73,14 @@ public class Controller : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("AntiCheat"))
+        {
+            transform.position = new Vector2(transform.position.x, transform.position.y - 5);
+        }
+    }
+
     /// <summary>
     /// Description:
     /// Standard Unity function called once when the script starts before Update

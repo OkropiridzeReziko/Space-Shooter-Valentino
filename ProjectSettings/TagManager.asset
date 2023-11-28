@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Barrier
   - OOB
+  - AntiCheat
   layers:
   - Default
   - TransparentFX
