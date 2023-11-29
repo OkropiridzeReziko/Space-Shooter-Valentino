@@ -293,4 +293,4 @@ MonoBehaviour:
   isPlayerControlled: 0
   fireRate: 2.5
   projectileSpread: 1
-  fireEffect: {fileID: 6229913163069739088, guid: a499391aa95bee24ab8e999366f75fe4, type: 3}
+  fireEffect: {fileID: 6229913163069739088, guid: c32d81673e232d547a03e394aa217238, type: 3}

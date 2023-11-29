@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5941243648251132412}
   - component: {fileID: 591895223030033539}
   m_Layer: 0
-  m_Name: VictoryEffect
+  m_Name: VictoryEffectQuiet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a5b939b70b55d8e49a1ad02668430984, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.037
   m_Pitch: 1
   Loop: 0
   Mute: 0
