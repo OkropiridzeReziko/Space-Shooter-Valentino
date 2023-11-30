@@ -12,6 +12,7 @@ using UnityEngine.UIElements;
 /// </summary>
 public class GameManager : MonoBehaviour
 {
+
     // The script that manages all others
     public static GameManager instance = null;
 

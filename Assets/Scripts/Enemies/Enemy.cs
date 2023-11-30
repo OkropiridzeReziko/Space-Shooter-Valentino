@@ -24,6 +24,11 @@ public class Enemy : MonoBehaviour
     [Tooltip("The enemy's gun components")]
     public List<ShootingController> guns = new List<ShootingController>();
 
+    [Header("Boss Stuff")]
+    [Tooltip("Ask Valentino")]
+    public GameManager gameManager;
+    public bool hasBoss;
+
     /// <summary>
     /// Enum to help with shooting modes
     /// </summary>
@@ -78,6 +83,11 @@ public class Enemy : MonoBehaviour
                 followTarget = GameManager.instance.player.transform;
             }
         }
+    }
+
+    public void BeatBoss()
+    {
+        gameManager.LevelCleared();
     }
 
     /// <summary>

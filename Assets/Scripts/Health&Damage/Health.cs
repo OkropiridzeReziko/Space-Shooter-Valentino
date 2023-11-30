@@ -46,6 +46,10 @@ public class Health : MonoBehaviour
     public bool Bottom = false;
     public bool One = false;
 
+    [Header("Boss Stuff")]
+    [Tooltip("Ask Valentino")]
+    public Enemy Boss;
+
     /// <summary>
     /// Description:
     /// Standard unity funciton called before the first frame update
@@ -224,7 +228,12 @@ public class Health : MonoBehaviour
         else
         {
             HandleDeathWithoutLives();
-        }      
+        }
+
+        if (teamId == 1 && name == "Boss")
+        {
+            Boss.BeatBoss();
+        }
     }
 
     /// <summary>
