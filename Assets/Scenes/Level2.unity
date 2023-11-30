@@ -2721,6 +2721,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a37851aa441366846870e1fea7847f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1409657640 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1601813381885574800, guid: 3a7d2ef5a1723c049ba5c64c99d6eac7, type: 3}
+  m_PrefabInstance: {fileID: 1409657636}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1452326482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5126,7 +5131,7 @@ MonoBehaviour:
   useLives: 1
   currentLives: 3
   maximumLives: 5
-  livesCounter: {fileID: 0}
+  livesCounter: {fileID: 1409657640}
   MainCamera: {fileID: 33765233}
   RespawnConstraintX: 0
   RespawnConstraintY: 0

@@ -74,7 +74,7 @@ public class Health : MonoBehaviour
     void Update()
     {
         InvincibilityCheck();
-        if (GameManager.win && teamId == 1)
+        if (GameManager.win && teamId > 0)
         {
             gameObject.GetComponent<Enemy>().scoreValue = 0;
             Die();
