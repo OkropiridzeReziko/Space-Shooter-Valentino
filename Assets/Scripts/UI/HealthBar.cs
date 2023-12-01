@@ -9,9 +9,9 @@ public class HealthBar : MonoBehaviour
     public Slider slider;
     public GameObject BossHealth;
 
-    public void SetHealth(int, 1)
-    {
-        slider.value = 1;
-    }
+    //public void SetHealth(int, health)
+    //{
+  //      slider.value = health;
+   // }
 
 }
