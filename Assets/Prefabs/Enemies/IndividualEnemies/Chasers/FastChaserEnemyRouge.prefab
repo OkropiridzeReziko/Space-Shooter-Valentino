@@ -84,6 +84,10 @@ PrefabInstance:
       propertyPath: teamId
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4413798097735496473, guid: cfd62ad4c55daa942bae8f75211b08e0, type: 3}
+      propertyPath: hitEffect
+      value: 
+      objectReference: {fileID: 5156419567158778961, guid: d35295653acdbe24081a5caee3d9c353, type: 3}
     - target: {fileID: 8890150608144808246, guid: cfd62ad4c55daa942bae8f75211b08e0, type: 3}
       propertyPath: m_IsTrigger
       value: 0
