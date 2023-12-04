@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using Unity.IO.LowLevel.Unsafe;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using static CameraController;
 
 /// <summary>
@@ -49,6 +50,7 @@ public class Health : MonoBehaviour
     [Header("Boss Stuff")]
     [Tooltip("Ask Valentino")]
     public Enemy Boss;
+    public Slider HealthBar;
 
     /// <summary>
     /// Description:
@@ -156,6 +158,12 @@ public class Health : MonoBehaviour
             timeToBecomeDamagableAgain = Time.time + invincibilityTime;
             isInvincableFromDamage = true;
             currentHealth -= damageAmount;
+
+            if (teamId == 1)
+            {
+                HealthBar.value = currentHealth;
+            }
+            
             CheckDeath();
         }
     }
