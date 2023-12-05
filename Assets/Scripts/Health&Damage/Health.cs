@@ -159,7 +159,7 @@ public class Health : MonoBehaviour
             isInvincableFromDamage = true;
             currentHealth -= damageAmount;
 
-            if (teamId == 1)
+            if (teamId == 1 && name == "Boss")
             {
                 HealthBar.value = currentHealth;
             }
