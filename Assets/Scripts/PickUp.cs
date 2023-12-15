@@ -37,5 +37,6 @@ public class PickUp : MonoBehaviour
             }
         }
         gameObject.SetActive(false);
+        Debug.Log("PAOIJSD{HAIJS{DOPAHSJD");
     }
 }

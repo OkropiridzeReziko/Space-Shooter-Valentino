@@ -10,7 +10,8 @@ using TMPro;
 public class Lives : UIelement
 {
     [Tooltip("The text UI to use for display")]
-    public TMP_Text displayText = null;
+    public TMP_Text displayTextLives = null;
+    public TMP_Text displayTextHealth = null;
     public GameObject Player;
 
     /// <summary>
@@ -23,10 +24,18 @@ public class Lives : UIelement
     /// </summary>
     public void LiveLost()
     {
-        if (displayText != null)
+        if (displayTextLives != null)
         {
-            displayText.text = "Lives: " + Player.GetComponent<Health>().currentLives.ToString();
+            displayTextLives.text = "Lives: " + Player.GetComponent<Health>().currentLives.ToString();
             Debug.Log(Player.GetComponent<Health>().currentLives.ToString());
+        }
+    }
+    public void HealthDisplay()
+    {
+        if (displayTextHealth != null)
+        {
+            displayTextHealth.text = "Health: " + Player.GetComponent<Health>().currentHealth.ToString();
+            Debug.Log(Player.GetComponent<Health>().currentHealth.ToString());
         }
     }
 }

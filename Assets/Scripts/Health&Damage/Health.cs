@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Threading;
 using Unity.IO.LowLevel.Unsafe;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -46,6 +47,8 @@ public class Health : MonoBehaviour
     public int RespawnConstraintY;
     public bool Bottom = false;
     public bool One = false;
+    public float bonusTime;
+    public GameObject Timer;
 
     [Header("Boss Stuff")]
     [Tooltip("Ask Valentino")]
@@ -80,7 +83,14 @@ public class Health : MonoBehaviour
         {
             gameObject.GetComponent<Enemy>().scoreValue = 0;
             Die();
+        } 
+        if (teamId == 0)
+        {
+            livesCounter.GetComponent<Lives>().HealthDisplay();
+            livesCounter.GetComponent<Lives>().LiveLost();
         }
+        
+
     }
 
     // The specific game time when the health can be damged again
@@ -255,10 +265,7 @@ public class Health : MonoBehaviour
     void HandleDeathWithLives()
     {
         currentLives -= 1;
-        if (teamId == 0)
-        {
-            livesCounter.GetComponent<Lives>().LiveLost();
-        }
+        
         if (currentLives > 0)
         {
             if (teamId == 0)
@@ -269,6 +276,7 @@ public class Health : MonoBehaviour
                 MainCamera.GetComponent<CameraController>().Lock();
                 transform.position = new Vector2(0, 999);
                 Invoke("Respawn", 5f);
+                Timer.GetComponent<CountdownTimer>().currentTime += bonusTime;
             } else
             {
                 Respawn();
